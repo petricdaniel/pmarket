@@ -192,9 +192,7 @@ const OurStore = () => {
                     id="sort"
                   >
                     <option value="manual">Featured</option>
-                    <option value="best-selling" selected="selected">
-                      Best selling
-                    </option>
+                    <option value="best-selling">Best selling</option>
                     <option value="title-ascending">Alphabetically, A-Z</option>
                     <option value="title-descending">
                       Alphabetically, Z-A

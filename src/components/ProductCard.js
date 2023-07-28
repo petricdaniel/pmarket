@@ -17,7 +17,7 @@ const ProductCard = (props) => {
     <>
       <div
         className={` ${
-          location.pathname === "/store" ? `gr-${grid}` : "col-3"
+          location.pathname == "/store" ? `gr-${grid}` : "col-3"
         } `}
       >
         <Link

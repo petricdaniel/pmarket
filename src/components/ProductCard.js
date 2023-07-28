@@ -13,17 +13,28 @@ const ProductCard = (props) => {
   const { grid } = props;
   let location = useLocation();
 
+  let linkTo;
+
+  if (location.pathname === "/") {
+    linkTo = "/store/product/:id";
+  } else if (location.pathname === "/store") {
+    linkTo = "product/:id";
+  } else if (location.pathname.startsWith("/store/product/")) {
+    // Extract the product ID from the current path and use it in the linkTo
+    const productId = location.pathname.split("/").pop();
+    linkTo = `/store/product/${productId}`;
+  } else {
+    linkTo = "/product/:id";
+  }
+
   return (
     <>
       <div
         className={` ${
-          location.pathname == "/store" ? `gr-${grid}` : "col-3"
+          location.pathname === "/store" ? `gr-${grid}` : "col-3"
         } `}
       >
-        <Link
-          to={`${location.pathname === "/" ? "store/product/:id" : ""}`}
-          className="product-card position-relative"
-        >
+        <Link to={linkTo} className="product-card position-relative">
           <div className="wishlist-icon position-absolute">
             <button className="border-0 bg-transparent">
               <img src={wish} alt="wishlist" />
@@ -72,7 +83,7 @@ const ProductCard = (props) => {
           location.pathname === "/store" ? `gr-${grid}` : "col-3"
         } `}
       >
-        <Link className="product-card position-relative">
+        <Link to={linkTo} className="product-card position-relative">
           <div className="wishlist-icon position-absolute">
             <button className="border-0 bg-transparent">
               <img src={wish} alt="wishlist" />

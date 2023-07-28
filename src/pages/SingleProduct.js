@@ -20,7 +20,7 @@ const SingleProduct = () => {
     img: "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-fernando-arcos-190819.jpg&fm=jpg",
   };
 
-  const [orderedProduct, setorderedProduct] = useState(true);
+  const [orderedProduct] = useState(true);
   const copyToClipboard = (text) => {
     console.log("text", text);
     var textField = document.createElement("textarea");
@@ -30,7 +30,7 @@ const SingleProduct = () => {
     document.execCommand("copy");
     textField.remove();
   };
-  const closeModal = () => {};
+
   return (
     <>
       <Meta title={"Product Name"} />
@@ -169,13 +169,13 @@ const SingleProduct = () => {
                 </div>
                 <div className="d-flex align-items-center gap-15">
                   <div>
-                    <a href="">
+                    <a href="https://www.facebook.com">
                       <MdOutlineCompareArrows className="fs-5 me-2" /> Add to
                       Compare
                     </a>
                   </div>
                   <div>
-                    <a href="">
+                    <a href="https://www.facebook.com">
                       <MdOutlineFavoriteBorder className="fs-5 me-2" /> Add to
                       Wishlist
                     </a>
@@ -192,7 +192,7 @@ const SingleProduct = () => {
                 <div className="d-flex gap-10 align-items-center my-2">
                   <h3 className="product-heading">Product Link :</h3>
                   <a
-                    href="javascript:void(0);"
+                    href="https://www.facebook.com"
                     onClick={() => {
                       copyToClipboard(
                         "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-fernando-arcos-190819.jpg&fm=jpg"
@@ -243,7 +243,10 @@ const SingleProduct = () => {
                 </div>
                 {orderedProduct && (
                   <div>
-                    <a className="text-dark text-decoration-underline" href="">
+                    <a
+                      className="text-dark text-decoration-underline"
+                      href="https://www.facebook.com"
+                    >
                       Write a Review
                     </a>
                   </div>

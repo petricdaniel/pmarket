@@ -19,6 +19,7 @@ const Contact = () => {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87425.83626955084!2d23.534112418963616!3d46.78347363151436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490c1f916c0b8b%3A0xbbc601c331f148b!2sCluj-Napoca!5e0!3m2!1sro!2sro!4v1690019022276!5m2!1sro!2sro"
               width="600"
               height="450"
+              title="1"
               className="border-0 w-100"
               allowFullScreen=""
               loading="lazy"
